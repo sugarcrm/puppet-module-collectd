@@ -93,6 +93,7 @@ documentation for each plugin for configurable attributes.
 * `uptime` (see [collectd::plugin::uptime](#class-collectdpluginuptime) below)
 * `users` (see [collectd::plugin::users](#class-collectdpluginusers) below)
 * `varnish` (see [collectd::plugin::varnish](#class-collectdpluginvarnish) below)
+* `vmem` (see [collectd::plugin::vmem](#class-collectdpluginvmem) below)
 * `write_graphite` (see [collectd::plugin::write_graphite](#class-collectdpluginwrite_graphite) below)
 * `write_network` (see [collectd::plugin::write_network](#class-collectdpluginwrite_network) below)
 * `write_riemann` (see [collectd::plugin::write_riemann](#class-collectdpluginwrite_riemann) below)
