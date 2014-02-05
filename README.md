@@ -509,6 +509,14 @@ class { 'collectd::plugin::varnish':
 }
 ```
 
+####Class: `collectd::plugin::vmem`
+
+```puppet
+collectd::plugin::vmem {
+  verbose => false,
+}
+```
+
 ####Class: `collectd::plugin::write_graphite`
 
 ```puppet
