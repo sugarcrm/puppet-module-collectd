@@ -1,6 +1,6 @@
 # https://collectd.org/wiki/index.php/Plugin:nginx
 class collectd::plugin::nginx (
-  $url,
+  $url        = 'http://localhost/nginx_status',
   $ensure     = present,
   $user       = undef,
   $password   = undef,
