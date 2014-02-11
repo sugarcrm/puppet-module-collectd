@@ -2,12 +2,6 @@
 LoadPlugin memcached
 
 <Plugin memcached>
-
-<% @hosts.each do |host| -%>
- <Instance "<%= host %>">
-   Host "<%= host %>"
-   Port <%= @port %>
- </Instance>
-<% end -%>
-
+  Host "<%= @host %>"
+  Port "<%= @port %>"
 </Plugin>
