@@ -1,7 +1,7 @@
 # https://collectd.org/wiki/index.php/Plugin:memcached
 class collectd::plugin::memcached (
   $ensure = present,
-  $hosts  = '127.0.0.1',
+  $host   = '127.0.0.1',
   $port   = '11211',
 ) {
   include collectd::params
