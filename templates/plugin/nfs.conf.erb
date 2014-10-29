@@ -1,0 +1,11 @@
+LoadPlugin match_regex
+
+<Chain "PreCache">
+  <Rule "ignore_nfsv2">
+    <Match "regex">
+      Plugin "nfs"
+      PluginInstance "^(v2client|v2server)"
+    </Match>
+    Target "stop"
+  </Rule>
+</Chain>
