@@ -1,11 +1,12 @@
 # https://collectd.org/wiki/index.php/Plugin:DF
 class collectd::plugin::df (
-  $ensure         = present,
-  $fstypes        = [],
-  $ignoreselected = false,
-  $mountpoints    = [],
-  $reportbydevice = false,
-  $reportinodes   = true,
+  $ensure           = present,
+  $fstypes          = [],
+  $ignoreselected   = false,
+  $mountpoints      = [],
+  $reportbydevice   = false,
+  $reportinodes     = true,
+  $valuespercentage = true,
 ) {
   include collectd::params
 
