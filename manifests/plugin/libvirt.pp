@@ -1,6 +1,6 @@
 # https://collectd.org/wiki/index.php/Plugin:libvirt
 class collectd::plugin::libvirt (
-  $connection,
+  $connection       = 'test:///default',
   $ensure           = present,
   $refresh_interval = undef,
   $domain           = undef,
