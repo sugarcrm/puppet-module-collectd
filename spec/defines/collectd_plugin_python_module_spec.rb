@@ -84,7 +84,7 @@ describe 'collectd::plugin::python::module', :type => :define do
       })
 
       should contain_concat__fragment('collectd_plugin_python_conf_foo').with({
-        :content => /bar baz/,
+        :content => /bar.*baz/,
       })
     end
 
