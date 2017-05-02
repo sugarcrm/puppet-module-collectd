@@ -1,7 +1,16 @@
+  <%- require 'shellwords' -%>
   Import "<%= @module %>"
 
   <Module "<%= @module %>">
   <% @config.sort.each do |key,value| -%>
-    <%= key -%> <%= value -%>
+    <%- if value.is_a?(Array) -%>
+      <%= key -%> <%- value.sort.each do |v| -%><% if !!v == v %> <%= v -%><% else %> "<%= Shellwords.split(v).join('" "') -%>"<% end %><% end %>
+    <%- elsif value.is_a?(Hash) -%>
+      <%- value.sort.each do |k,v| -%>
+        <%= key -%> <%= k %> <% if !!v == v -%><%= v %><% else %>"<%= Shellwords.split(v).join('" "') %>"<% end %>
+      <%- end -%>
+    <%- else -%>
+      <%= key %> <% if !!value == value %><%= value %><% else %>"<%= Shellwords.split(value).join('" "') %>"<% end %>
+    <%- end -%>
   <% end %>
   </Module>
